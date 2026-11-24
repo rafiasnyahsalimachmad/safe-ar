@@ -73,3 +73,26 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+venv/
+
+# Local AI datasets, caches and model artifacts
+/ai/dataset/hagrid_filtered/
+/ai/dataset/processed/
+/ai/dataset/.hagrid_cache/
+/ai/dataset/.landmark_cache/
+/ai/models/*
+!/ai/models/README.md
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
