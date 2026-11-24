@@ -1,0 +1,10 @@
+Pillow==13.0.0
+pyarrow==23.0.1
+truststore==0.10.5
+
+# Step 2 uses the MediaPipe wheels for Python 3.11–3.12.
+mediapipe==0.10.14; python_version >= '3.11' and python_version < '3.13'
+numpy==1.26.4; python_version >= '3.11' and python_version < '3.13'
+opencv-contrib-python==4.11.0.86; python_version >= '3.11' and python_version < '3.13'
+# The pinned release includes a binary wheel for Intel macOS.
+sentencepiece==0.2.1; python_version >= '3.11' and python_version < '3.13'
