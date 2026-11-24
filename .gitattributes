@@ -4,6 +4,9 @@
 # Dataset provenance checks depend on the original CSV bytes.
 ai/dataset/**/*.csv -text whitespace=cr-at-eol
 
+# Preserve the original JPEG bytes.
+ai/dataset/**/*.jpg binary
+
 # Serialized model artifacts
 *.task binary
 *.joblib binary

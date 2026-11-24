@@ -1,6 +1,6 @@
 # S.A.F.E. AR Kelompok 6 — Step 2
 
-CSV tersedia dalam repository. Tautan gambar pratinjau mengarah ke artefak lokal.
+Dataset CSV dan gambar pratinjau tersedia di repository.
 
 **Validasi dataset fitur lulus.** 34,061 dari 35,134 gambar berhasil (96.95%). 1,073 gagal diekspor sebagai fitur dan dicatat di [extraction_failures.csv](../ai/dataset/processed/extraction_failures.csv).
 

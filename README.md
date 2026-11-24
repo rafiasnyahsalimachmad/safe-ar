@@ -48,13 +48,14 @@ python ai/extract_landmarks.py
 python ai/validate_landmarks.py
 ```
 
-Clone berisi empat CSV hasil Step 1 dan Step 2. Untuk memvalidasi vektor dan metadata CSV, jalankan perintah berikut dari akar repository.
+Checkout branch yang memuat dataset menyediakan semua JPEG, empat CSV, skema fitur, dan model. Validasi salinan yang sudah tersedia dari akar repository.
 
 ```sh
+python ai/validate_dataset.py --check-only
 python ai/validate_landmarks.py --check-only
 ```
 
-Untuk bekerja dengan JPEG sumber, salin lima folder kelas dari workspace lama atau jalankan `python ai/filter_hagrid.py --repair` untuk mengambil gambar yang belum tersedia. Setelah JPEG tersedia, jalankan `python ai/validate_dataset.py --check-only` untuk memvalidasinya. Opsi `--check-only` mempertahankan laporan dan gambar pratinjau lokal.
+Jika ada JPEG yang hilang dari salinan kerja, `python ai/filter_hagrid.py --repair` dapat mengambil kembali file yang diperlukan. Opsi `--check-only` mempertahankan laporan dan gambar pratinjau.
 
 `--output` memilih direktori hasil atau direktori yang divalidasi. `--source` pada kedua script landmark memilih folder yang berisi `metadata.csv` dan JPEG hasil Step 1.
 
@@ -62,7 +63,7 @@ Untuk bekerja dengan JPEG sumber, salin lima folder kelas dari workspace lama at
 
 Sumber Step 1 adalah sampel HaGRID 384p oleh cj-mills. Dataset card mencantumkan CC BY-SA 4.0, dan repo HaGRID merujuk pada lisensi publik HaGRID tersendiri. Saat membagikan materi, cantumkan atribusi, pertahankan tautan lisensi, dan nyatakan perubahan sesuai ketentuan sumber. [Dataset card](https://huggingface.co/datasets/cj-mills/hagrid-sample-120k-384p) · [Lisensi HaGRID](https://github.com/hukenovs/hagrid/blob/master/license/en_us.pdf)
 
-Git menyimpan metadata **35.134 gambar**, CSV untuk **34.061 vektor valid**, log **1.073 kegagalan**, dan bundel Hand Landmarker. JPEG HaGRID, gambar pratinjau, serta cache pemrosesan tersedia di penyimpanan lokal. [Rincian dataset](ai/dataset/README.md)
+Git menyimpan **35.134 JPEG HaGRID** beserta metadata, CSV untuk **34.061 vektor valid**, log **1.073 kegagalan**, gambar pratinjau, dan bundel Hand Landmarker. Cache yang dapat dibuat ulang tetap lokal. [Rincian dataset](ai/dataset/README.md)
 
 - [Laporan Step 1](docs/dataset_report.md)
 - [Laporan Step 2](docs/extraction_report.md)

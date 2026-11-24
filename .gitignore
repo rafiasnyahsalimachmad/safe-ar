@@ -68,17 +68,9 @@ venv/
 .mypy_cache/
 .ruff_cache/
 
-# Downloaded HaGRID images, generated previews and local processing caches
-/ai/dataset/hagrid_filtered/**/*.jpg
-/ai/dataset/hagrid_filtered/**/*.jpeg
-/ai/dataset/hagrid_filtered/**/*.png
-/ai/dataset/processed/landmark_visual_samples/*.jpg
+# Regenerable AI processing caches
 /ai/dataset/.hagrid_cache/
 /ai/dataset/.landmark_cache/
-
-# Local report copies. Canonical reports and feature schema live in docs/.
-/ai/dataset/hagrid_filtered/dataset_report.md
-/ai/dataset/processed/extraction_report.md
 
 # Local secrets
 .env
