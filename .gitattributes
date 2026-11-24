@@ -1,2 +1,10 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Dataset provenance checks depend on the original CSV bytes.
+ai/dataset/**/*.csv -text whitespace=cr-at-eol
+
+# Serialized model artifacts
+*.task binary
+*.joblib binary
+*.pkl binary

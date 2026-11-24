@@ -1,6 +1,6 @@
 # S.A.F.E. AR Kelompok 6 — Step 2
 
-Tautan ke CSV atau gambar mengarah ke salinan lokal yang disimpan di luar Git.
+CSV tersedia dalam repository. Tautan gambar pratinjau mengarah ke artefak lokal.
 
 **Validasi dataset fitur lulus.** 34,061 dari 35,134 gambar berhasil (96.95%). 1,073 gagal diekspor sebagai fitur dan dicatat di [extraction_failures.csv](../ai/dataset/processed/extraction_failures.csv).
 
