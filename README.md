@@ -38,7 +38,7 @@ Di Windows, buat lingkungan dengan `py -3.12 -m venv .venv` dan aktifkan melalui
 
 ### Menghasilkan dataset dari sumber
 
-Gunakan folder tujuan yang baru untuk eksperimen baru. Saat satu set ekspor sudah tersedia di lokasi default, script ekstraksi melewatinya. Step 1 dapat memakai `--archive /path/ke/hagrid-sample-120k-384p.zip` untuk membaca ZIP lokal. Step 2 akan mengambil model Hand Landmarker yang versinya ditetapkan jika file model lokal belum tersedia. [Model MediaPipe](ai/models/README.md)
+Gunakan folder tujuan yang baru untuk eksperimen baru. Saat satu set ekspor sudah tersedia di lokasi default, script ekstraksi melewatinya. Step 1 dapat memakai `--archive /path/ke/hagrid-sample-120k-384p.zip` untuk membaca ZIP lokal. Step 2 memakai model Hand Landmarker yang disertakan di repository dan dapat mengambil bundel yang sama jika file lokal belum tersedia. [Model MediaPipe](ai/models/README.md)
 
 ```sh
 python ai/inspect_hagrid.py
@@ -48,12 +48,13 @@ python ai/extract_landmarks.py
 python ai/validate_landmarks.py
 ```
 
-Untuk memakai dataset hasil eksperimen sebelumnya, salin `hagrid_filtered/` dan `processed/` dari workspace lama ke folder lokal `ai/dataset/` di clone. Validasi kedua salinan dengan perintah berikut. Opsi `--check-only` mempertahankan laporan dan gambar pratinjau yang sudah ada.
+Clone berisi empat CSV hasil Step 1 dan Step 2. Untuk memvalidasi vektor dan metadata CSV, jalankan perintah berikut dari akar repository.
 
 ```sh
-python ai/validate_dataset.py --check-only
 python ai/validate_landmarks.py --check-only
 ```
+
+Untuk bekerja dengan JPEG sumber, salin lima folder kelas dari workspace lama atau jalankan `python ai/filter_hagrid.py --repair` untuk mengambil gambar yang belum tersedia. Setelah JPEG tersedia, jalankan `python ai/validate_dataset.py --check-only` untuk memvalidasinya. Opsi `--check-only` mempertahankan laporan dan gambar pratinjau lokal.
 
 `--output` memilih direktori hasil atau direktori yang divalidasi. `--source` pada kedua script landmark memilih folder yang berisi `metadata.csv` dan JPEG hasil Step 1.
 
@@ -61,7 +62,7 @@ python ai/validate_landmarks.py --check-only
 
 Sumber Step 1 adalah sampel HaGRID 384p oleh cj-mills. Dataset card mencantumkan CC BY-SA 4.0, dan repo HaGRID merujuk pada lisensi publik HaGRID tersendiri. Saat membagikan materi, cantumkan atribusi, pertahankan tautan lisensi, dan nyatakan perubahan sesuai ketentuan sumber. [Dataset card](https://huggingface.co/datasets/cj-mills/hagrid-sample-120k-384p) · [Lisensi HaGRID](https://github.com/hukenovs/hagrid/blob/master/license/en_us.pdf)
 
-Folder lokal `ai/dataset/hagrid_filtered/` memuat **35.134 JPEG** dan metadata. `ai/dataset/processed/` memuat **34.061 vektor valid** dan log untuk **1.073 kegagalan**. Git mengabaikan kedua folder hasil beserta cache dan bobot model. [Penyimpanan lokal](ai/dataset/README.md)
+Git menyimpan metadata **35.134 gambar**, CSV untuk **34.061 vektor valid**, log **1.073 kegagalan**, dan bundel Hand Landmarker. JPEG HaGRID, gambar pratinjau, serta cache pemrosesan tersedia di penyimpanan lokal. [Rincian dataset](ai/dataset/README.md)
 
 - [Laporan Step 1](docs/dataset_report.md)
 - [Laporan Step 2](docs/extraction_report.md)
