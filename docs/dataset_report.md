@@ -1,6 +1,6 @@
 # S.A.F.E. AR — Step 1. Inspeksi dan ekstraksi HaGRID
 
-CSV tersedia dalam repository. Tautan gambar pratinjau mengarah ke artefak lokal.
+Dataset CSV dan gambar pratinjau tersedia di repository.
 
 **Validasi otomatis lulus**. 35,134 JPEG tervalidasi di `ai/dataset/hagrid_filtered/`.
 
