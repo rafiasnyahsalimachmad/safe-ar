@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1487997017249533171}
   - component: {fileID: 6666469582203529828}
   m_Layer: 0
-  m_Name: WarningBeacon
+  m_Name: DangerBeacon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

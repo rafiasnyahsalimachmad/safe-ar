@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 994384852139317978}
   - component: {fileID: 5415368426732502753}
   m_Layer: 0
-  m_Name: SafetyShield
+  m_Name: SafeShield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
